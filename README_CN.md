@@ -2,7 +2,6 @@
 
 一套采用蓝紫渐变设计风格的 WPF 自定义控件库,基于 .NET 10,所有控件的样式与模板均在代码中动态构建,无需 XAML 资源字典引用。
 
-![Image](PNGS/1.png)
 
 ## 项目信息
 
@@ -41,6 +40,8 @@
 | 网格视图 | `AITechGridView` | `ListBox` | `UniformGrid` 自动列数,悬浮缩放 1.03 |
 | 容器面板 | `AITechPanel` | `ContentControl` | 带阴影的圆角容器,悬浮边框动画 |
 | 选项卡 | `AITechPivot` | `Selector` | 头部 + 内容区,切换带滑动 + 淡入淡出动画,支持品牌项 |
+
+![Image](PNGS/1.png)
 
 ## 安装
 
