@@ -13,14 +13,14 @@
 | 作者 | KS.STUDIO |
 | WPF 支持 | 启用 (`UseWPF=true`) |
 
-![Image](PNGS/2.png)
-
 ## 设计特点
 
 - **统一品牌色**:蓝紫渐变 `RGB(37,99,235) → RGB(147,51,234)` 贯穿所有控件
 - **纯代码构建样式**:使用 `FrameworkElementFactory` + `Binding` + `Trigger` 在 C# 代码中动态生成 `Style` 与 `ControlTemplate`,零 XAML 资源字典依赖
 - **属性即设计**:所有外观参数(圆角、渐变色、边框、阴影等)均暴露为依赖属性,变更即重建样式
 - **悬浮与聚焦动效**:卡片缩放、边框渐变、内容滑动等内置动画
+
+![Image](PNGS/2.png)
 
 ![Image](PNGS/3.png)
 
