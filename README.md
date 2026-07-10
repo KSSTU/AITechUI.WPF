@@ -73,6 +73,8 @@ dotnet add package AITechUI.WPF
         <ai:AITechEdit ShowClearButton="True" Height="40" Margin="0,0,0,12" />
         <!-- Progress Bar -->
         <ai:AITechProgressBar Value="60" Height="8" Margin="0,0,0,12" />
+        <!-- Slider -->
+        <ai:AITechSlider Value="60" Height="8" Margin="0,0,0,12" />
         <!-- Pivot Tabs -->
         <ai:AITechPivot Height="320">
             <ai:AITechPivotItem Header="Home">
