@@ -1,0 +1,45 @@
+﻿<Window x:Class="AITechExample.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AITechExample"
+        xmlns:ai="clr-namespace:AITechControls;assembly=AITechControls"
+        mc:Ignorable="d"
+        Title="Window1" Height="600" Width="800"
+        Background="#FF0E0F2D">
+    <StackPanel Margin="20" Width="320">
+        <!-- 渐变按钮 -->
+        <ai:AITechButton Content="点击我" Height="40" Margin="0,0,0,12" />
+
+        <!-- 自定义配色的按钮 -->
+        <ai:AITechButton Content="绿色按钮"
+                         GradientStart="#16A34A" GradientEnd="#22D3EE"
+                         HoverGradientStart="#15803D" HoverGradientEnd="#06B6D4"
+                         Height="40" Margin="0,0,0,12" />
+
+        <!-- 渐变文字 -->
+        <ai:AITechText Content="渐变标题" FontSize="24" FontWeight="Bold"
+                       HorizontalContentAlign="Center" Margin="0,0,0,12" />
+
+        <!-- 带清空按钮的输入框 -->
+        <ai:AITechEdit ShowClearButton="True" Height="40" Margin="0,0,0,12" />
+
+        <!-- 进度条 -->
+        <ai:AITechProgressBar Value="60" Height="8" Margin="0,0,0,12" />
+        
+        <!-- 滑动条 -->
+        <ai:AITechSlider Value="60" Height="8" Margin="0,0,0,12" />
+
+        <!-- 选项卡 -->
+        <ai:AITechPivot Height="320">
+            <ai:AITechPivotItem Header="首页">
+                <TextBlock Text="首页内容" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </ai:AITechPivotItem>
+            <ai:AITechPivotItem Header="设置">
+                <TextBlock Text="设置内容" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </ai:AITechPivotItem>
+        </ai:AITechPivot>
+    </StackPanel>
+
+</Window>

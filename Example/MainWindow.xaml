@@ -1,0 +1,125 @@
+<Window x:Class="AITechExample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AITechExample"
+        xmlns:aitech="clr-namespace:AITechControls;assembly=AITechControls"
+        mc:Ignorable="d"
+        Title="MainWindow"
+        WindowStartupLocation="CenterScreen"
+        Height="750"
+        Width="1100">
+    <Grid Background="#FF0E0F2D">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <aitech:AITechText Content="AI科技风 WPF UI 展示" FontSize="50" Grid.Row="0" HorizontalAlignment="Center" Margin="10 20"/>
+            <aitech:AITechPivot Margin="30 0" Grid.Row="1" x:Name="pivot">
+            <aitech:AITechPivotItem Header="按钮">
+                <Border Margin="20">
+                    <StackPanel>
+                        <aitech:AITechText Content="AITechButton"/>
+                        <TextBlock Text="渐变填充按钮，支持自定义圆角、渐变颜色和悬停动画效果。" TextWrapping="Wrap" Margin="0,10,0,0"/>
+                        <aitech:AITechButton Width="160" Height="36" HorizontalAlignment="Left" Margin="0,10,0,0" Click="AITechButton_Click">Try Button</aitech:AITechButton>
+                        <aitech:AITechButton Width="200" Height="40" Margin="0,10,0,0" HorizontalAlignment="Left" Click="AITechButton_Click">Start Building</aitech:AITechButton>
+                        <aitech:AITechProgressBar Width="800"  Value="50" Maximum="100" Minimum="0" Margin="0 20" HorizontalAlignment="Left"/>
+                        <aitech:AITechSlider Width="400"  Value="50" Maximum="100" Minimum="0" Margin="0 20" HorizontalAlignment="Left"/>
+                    </StackPanel>
+                </Border>
+            </aitech:AITechPivotItem>
+            <aitech:AITechPivotItem Header="输入框">
+                <Border Margin="20">
+                    <StackPanel>
+                        <aitech:AITechText Content="AITechEdit"/>
+                        <TextBlock Text="渐变焦点输入框，支持自定义圆角、清除按钮和多行输入。" TextWrapping="Wrap" Margin="0,10,0,0"/>
+                        <aitech:AITechEdit Width="260" HorizontalAlignment="Left" Text="输入文字试试..." Margin="0,10,0,0"/>
+                        <aitech:AITechEdit Width="450" Margin="0,10,0,0" HorizontalAlignment="Left" ShowClearButton="True" AcceptsReturn="True" Text="自定义圆角渐变输入框"/>
+                    </StackPanel>
+                </Border>
+            </aitech:AITechPivotItem>
+            <aitech:AITechPivotItem Header="文本">
+                <Border Margin="20">
+                    <StackPanel>
+                        <aitech:AITechText Content="AITechText"/>
+                        <TextBlock Text="渐变文字控件，支持自定义渐变颜色、字体大小和粗细。" TextWrapping="Wrap" Margin="0,10,0,0"/>
+                        <aitech:AITechText Content="Green Gradient Text" Margin="0,10,0,0"/>
+                        <aitech:AITechText>蓝紫渐变标题文字</aitech:AITechText>
+                        <aitech:AITechText>自定义橙红渐变文字，带圆角底色</aitech:AITechText>
+                    </StackPanel>
+                </Border>
+            </aitech:AITechPivotItem>
+            <aitech:AITechPivotItem Header="选择框">
+                <Border Margin="20">
+                    <StackPanel>
+                        <aitech:AITechText Content="AITechCheckBox"/>
+                        <TextBlock Text="自定义复选框，支持渐变选中效果和圆角样式。" TextWrapping="Wrap" Margin="0,10,0,0"/>
+                        <aitech:AITechCheckBox Content="同意用户协议" IsChecked="True" Margin="10" HorizontalAlignment="Left"/>
+                        <aitech:AITechComboBox Width="400" Height="40" HorizontalAlignment="Left" Margin="0,10,0,0" SelectedIndex="0">
+                            <ComboBoxItem>选项一</ComboBoxItem>
+                            <ComboBoxItem>选项二</ComboBoxItem>
+                            <ComboBoxItem>选项三</ComboBoxItem>
+                        </aitech:AITechComboBox>
+                    </StackPanel>
+                </Border>
+            </aitech:AITechPivotItem>
+            <aitech:AITechPivotItem Header="列表">
+                <Border Margin="20">
+                    <StackPanel>
+                        <aitech:AITechText Margin="0,10,0,10">列表视图</aitech:AITechText>
+                        <aitech:AITechListBox Width="200" Height="220" HorizontalAlignment="Left" Margin="0,10,0,0">
+                            <ListBoxItem>列表条目 1</ListBoxItem>
+                            <ListBoxItem>列表条目 2</ListBoxItem>
+                            <ListBoxItem>列表条目 3</ListBoxItem>
+                            <ListBoxItem>选中渐变效果测试</ListBoxItem>
+                        </aitech:AITechListBox>
+                    </StackPanel>
+                </Border>
+            </aitech:AITechPivotItem>
+            <aitech:AITechPivotItem Header="ListView">
+                <aitech:AITechListView ItemsSource="{Binding Items}" SelectionChanged="AITechListView_SelectionChanged">
+                    <aitech:AITechListView.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <TextBlock Text="{Binding Title}" Margin="0,10,0,4"/>
+                                <TextBlock Text="{Binding Description}" TextWrapping="Wrap"/>
+                                <WrapPanel Margin="0,10,0,0">
+                                    <Border>
+                                        <TextBlock Text="{Binding TagText}"/>
+                                    </Border>
+                                </WrapPanel>
+                            </StackPanel>
+                        </DataTemplate>
+                    </aitech:AITechListView.ItemTemplate>
+                </aitech:AITechListView>
+            </aitech:AITechPivotItem>
+            <aitech:AITechPivotItem Header="GridView">
+                <aitech:AITechGridView ItemsSource="{Binding Items}" SelectionChanged="AITechGridView_SelectionChanged">
+                    <aitech:AITechGridView.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <Ellipse Width="36" Height="36" Fill="{Binding IconColor}"/>
+                                <TextBlock Text="{Binding Title}" Margin="0,8,0,3"/>
+                                <TextBlock Text="{Binding Description}" TextWrapping="Wrap"/>
+                                <WrapPanel Margin="0,8,0,0">
+                                    <Border>
+                                        <TextBlock Text="{Binding TagText}"/>
+                                    </Border>
+                                </WrapPanel>
+                            </StackPanel>
+                        </DataTemplate>
+                    </aitech:AITechGridView.ItemTemplate>
+                </aitech:AITechGridView>
+            </aitech:AITechPivotItem>
+            <aitech:AITechPivotItem Header="Panel">
+                <aitech:AITechPanel  Margin="20">
+                    <StackPanel Margin="20">
+                        <aitech:AITechText Content="AITechPanel"/>
+                        <TextBlock Text="自定义控件区域" TextWrapping="Wrap" Margin="0,10,0,0"/>
+                    </StackPanel>
+                </aitech:AITechPanel>
+            </aitech:AITechPivotItem>
+        </aitech:AITechPivot>
+    </Grid>
+</Window>
