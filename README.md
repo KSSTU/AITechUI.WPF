@@ -127,12 +127,6 @@ UI4Controls/
 └── AITechPivot.cs            # Pivot tabs
 ```
 
-## Build
-```powershell
-dotnet build -c Release
-```
-Output: `AITechControls.dll`. With `GeneratePackageOnBuild` enabled, a `AITechUI.WPF.<version>.nupkg` NuGet package is also generated.
-
 ## Dependencies
 - .NET 10.0 SDK
 - Windows OS (WPF)
