@@ -149,14 +149,6 @@ UI4Controls/
 └── AITechPivot.cs            # 选项卡
 ```
 
-## 构建
-
-```powershell
-dotnet build -c Release
-```
-
-构建产物为 `AITechControls.dll`,同时开启 `GeneratePackageOnBuild`,会生成 `AITechUI.WPF.<版本>.nupkg` NuGet 包。
-
 ## 依赖
 
 - .NET 10.0 SDK
