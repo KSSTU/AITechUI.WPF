@@ -90,7 +90,8 @@ dotnet add package AITechUI.WPF
 
         <!-- 进度条 -->
         <ai:AITechProgressBar Value="60" Height="8" Margin="0,0,0,12" />
-
+        <!-- 进度条 -->
+        <ai:AITechSlider Value="60" Height="8" Margin="0,0,0,12" />
         <!-- 选项卡 -->
         <ai:AITechPivot Height="320">
             <ai:AITechPivotItem Header="首页">
