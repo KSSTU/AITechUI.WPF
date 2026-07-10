@@ -50,16 +50,6 @@
 dotnet add package AITechUI.WPF
 ```
 
-### 引用项目
-
-在 WPF 项目的 `.csproj` 中添加项目引用:
-
-```xml
-<ItemGroup>
-  <ProjectReference Include="..\AITechControls.csproj" />
-</ItemGroup>
-```
-
 ## 使用示例
 
 ### App.xaml 引用流畅主题(强烈建议)
