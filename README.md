@@ -39,14 +39,6 @@ A WPF custom control library featuring a blue-purple gradient design style. Buil
 dotnet add package AITechUI.WPF
 ```
 
-### Project Reference
-Add a project reference in your WPF project's `.csproj`:
-```xml
-<ItemGroup>
-  <ProjectReference Include="..\AITechControls.csproj" />
-</ItemGroup>
-```
-
 ## Usage Examples
 ### App.xaml references fluent theme (strongly recommended)
 ```xml
